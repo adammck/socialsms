@@ -6,7 +6,6 @@ or [PyGnokii](http://github.com/adammck/pygnokii).
 
 
 ### A Fairly Typical Session
-Arrows to the left represent an SMS received by UniTard, to the right, sent.
 
 	<< help
 	>> join <GROUP>
@@ -28,10 +27,9 @@ Arrows to the left represent an SMS received by UniTard, to the right, sent.
 	<< join dudes
 	>> You have joined the DUDES group
 	
-    << dudes oh wow, all you dudes are receiving my messages
-	>> Your message was sent to the DUDES group (5 people)
-	
 	<< list members of dudes
 	>> Members of DUDES: ADAM, MARK, EVAN, MERRICK, CHRIS, MUDKIP
 
-    << dudes oh wow, all you guys are receiving my messages
+    << dudes oh wow, all you dudes are receiving my messages
+	>> Your message was sent to the DUDES group (5 people)
+
