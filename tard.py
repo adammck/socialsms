@@ -24,7 +24,7 @@ DEV_GROUPS = {
 }
 
 
-class UniTard(SmsApplication):
+class SocialSMS(SmsApplication):
 	people = DEV_PEOPLE
 	groups = DEV_GROUPS
 	kw = SmsKeywords()
@@ -201,7 +201,7 @@ class UniTard(SmsApplication):
 
 
 # start the application in a new thread
-UniTard(
+SocialSMS(
 	backend=kannel,
 	sender_args=["kuser", "kpass"]
 ).run()
