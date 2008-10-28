@@ -5,7 +5,7 @@ from smsapp import *
 import kannel, time
 
 
-class UniTard(SmsApplication):
+class SocialSMS(SmsApplication):
 	kw = SmsKeywords()
 	people = {}
 	groups = {}
@@ -182,10 +182,10 @@ class UniTard(SmsApplication):
 
 
 # start the application in a new thread
-UniTard( backend=kannel, sender_args=["user", "pass"]).run()
-
-
-
+SocialSMS(
+	backend=kannel,
+	sender_args=["kuser", "kpass"]
+).run()
 
 try:
 	# block until ctrl+c
