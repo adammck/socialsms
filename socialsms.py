@@ -5,29 +5,10 @@ from smsapp import *
 import kannel, time
 
 
-# prepopulate a bunch of people during dev
-DEV_PEOPLE = {
-	"16467444705": "ADAM",
-	"16072066710": "MARK",
-	"13364130840": "EVAN",
-	"12064849177": "MERRICK",
-	"16462039624": "KATIE",
-	"16464105122": "CHRIS",
-	"16462266361": "ERICA" }
-
-# same with groups
-DEV_GROUPS = {
-	"CHICKS": ["16462039624", "16462266361"],
-	"DUDES":  ["16467444705", "16072066710", "13364130840", "12064849177", "16464105122"],
-	"DEVS":   ["16467444705", "16072066710", "13364130840", "12064849177"],
-	"ADULTS": ["16464105122", "16462266361"]
-}
-
-
 class UniTard(SmsApplication):
-	people = DEV_PEOPLE
-	groups = DEV_GROUPS
 	kw = SmsKeywords()
+	people = {}
+	groups = {}
 
 
 	def __identify(self, caller, task=None):
@@ -201,12 +182,11 @@ class UniTard(SmsApplication):
 
 
 # start the application in a new thread
-UniTard(
-	backend=kannel,
-	sender_args=["kuser", "kpass"]
-).run()
+UniTard( backend=kannel, sender_args=["user", "pass"]).run()
 
-	
+
+
+
 try:
 	# block until ctrl+c
 	while True: time.sleep(1)
